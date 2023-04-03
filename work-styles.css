@@ -1,0 +1,150 @@
+/* =====Global ====*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Heebo", sans-serif;
+}
+body {
+  /* max-width: 1200px; */
+  width: 100vw;
+  margin: auto;
+  background-color: white;
+}
+.navBar {
+  display: flex;
+  justify-content: right;
+  height: 45px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.navBar a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  margin: auto 10px;
+  color: black;
+}
+#menubar {
+  display: none;
+  font-size: 40px;
+}
+
+/* =====Feature work===== */
+.featureWork {
+  margin: auto 148px;
+  padding: 10px;
+}
+.featureWork p:first-child {
+  font-size: 20px;
+}
+
+.works {
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto 10px;
+  justify-content: space-evenly;
+}
+.imageFrame {
+  width: 300px;
+  height: 200px;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.imageFrame img {
+  width: 400px;
+  height: 250px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.workDescript {
+  margin: 1px 10px;
+  width: 500px;
+  align-self: self-end;
+  margin-left: 0vh;
+}
+.workDescript h2 {
+  margin: 0px auto 20px;
+}
+.works .year {
+  background-color: #142850;
+  color: white;
+  font-weight: bolder;
+  border-radius: 50px;
+  margin-right: 30px;
+  padding: 1px 10px;
+}
+.workDescript p {
+  margin: 20px auto;
+}
+.workDescript span {
+  color: grey;
+}
+hr {
+  border-top: 1px solid rgb(234, 232, 232);
+  margin: 30px auto;
+}
+/*=====================*/
+/*====== Footer =======*/
+.socialbadge {
+  display: block;
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.socialbadge i {
+  padding: 10px;
+}
+#copyright {
+  text-align: center;
+  margin: 20px auto 50px;
+}
+/*============================*/
+/*======= Small screen  ======*/
+@media (max-width: 1068px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #menubar {
+    display: inline-block;
+    position: relative;
+    align-items: baseline;
+    left: 200px;
+  }
+  body > .navBar {
+    display: none;
+    background-color: orange;
+  }
+
+  .WhiteBoxContainer {
+    padding: 15px;
+    width: 400px;
+    margin: 10px;
+  }
+  .featureWork {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featureWork p:first-child {
+    margin: auto;
+  }
+  .works {
+    flex-direction: column;
+    align-items: center;
+  }
+  .workDescript {
+    width: 400px;
+  }
+  .imageFrame {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}
