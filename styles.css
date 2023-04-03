@@ -1,0 +1,264 @@
+/* =====Global ====*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: darkgray;
+  font-family: "Heebo", sans-serif;
+}
+body {
+  /* max-width: 1200px; */
+  width: 100vw;
+  margin: auto;
+  background-color: white;
+}
+.navBar {
+  display: flex;
+  justify-content: right;
+  height: 45px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.navBar a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  margin: auto 10px;
+  color: black;
+}
+#menubar {
+  display: none;
+  font-size: 40px;
+}
+/*=== Section 1: Header ===*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.brefIntro {
+  display: inline-block;
+  margin: 50px 148px;
+  width: 497px;
+}
+header p {
+  margin-top: 20px;
+}
+header button {
+  background-color: #ff6464;
+  margin-top: 20px;
+  padding: 8px 15px;
+  border: none;
+  color: white;
+}
+
+.circle {
+  /* สร้างวงกลมไว้สำหรับบรรจุภาพโปรไฟล์  */
+  display: block;
+  right: 13vw;
+  width: 275px;
+  height: 275px;
+  border: 5px solid #8ac9fc;
+  border-radius: 50%; /*ทำให้เป็นวงกลม*/
+  overflow: hidden; /*รูปไม่ล้นจากวงกลม*/
+  /* overflow อะไรก็ตามที่เกินล้นจาก circle จะให้ปิดซ่อนไว้ ไม่แสดง*/
+}
+.circle img {
+  /* หากนำรูปภาพไปใส่ในวงกลม */
+  width: 240x;
+  height: 360px;
+  margin-left: -3px;
+  margin-top: -18px;
+  /* ปรับให้ภาพมีขนาด 450px แล้วขยับไปทางซ้ายกับขึ้นบน */
+}
+
+/* =====recent post===== */
+
+.recentPost {
+  background-color: #edf7fa;
+  padding: 10px;
+}
+.recentPost .navBar p:nth-child(1) {
+  font-size: 20px;
+}
+.recentPost .navBar p:nth-child(2) {
+  /* View all*/
+  color: #00a8cc;
+}
+.recentPost .navBar p:nth-child(3) {
+  display: none;
+}
+.recentPost .navBar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 148px;
+  margin-right: 148px;
+}
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  margin: auto 128px 30px;
+}
+.WhiteBoxContainer {
+  display: block;
+  background-color: white;
+  padding: 30px;
+  width: 500px;
+  margin: 10px;
+}
+.WhiteBoxContainer p:nth-child(2) {
+  display: block;
+  margin: 15px auto;
+}
+/* =====Feature work===== */
+.featureWork {
+  margin: auto 148px;
+  padding: 10px;
+}
+.featureWork p:first-child {
+  font-size: 20px;
+}
+
+.works {
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto 10px;
+  justify-content: space-evenly;
+}
+.imageFrame {
+  width: 300px;
+  height: 200px;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.imageFrame img {
+  width: 400px;
+  height: 250px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.workDescript {
+  margin: 1px 10px;
+  width: 500px;
+  align-self: self-end;
+  margin-left: 0vh;
+}
+.workDescript h2 {
+  margin: 0px auto 20px;
+}
+.works .year {
+  background-color: #142850;
+  color: white;
+  font-weight: bolder;
+  border-radius: 50px;
+  margin-right: 30px;
+  padding: 1px 10px;
+}
+.workDescript p {
+  margin: 20px auto;
+}
+.workDescript span {
+  color: grey;
+}
+hr {
+  border-top: 1px solid rgb(234, 232, 232);
+  margin: 30px auto;
+}
+/*=====================*/
+/*====== Footer =======*/
+.socialbadge {
+  display: block;
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.socialbadge i {
+  padding: 10px;
+}
+#copyright {
+  text-align: center;
+  margin: 20px auto 50px;
+}
+/*============================*/
+/*======= Small screen  ======*/
+@media (max-width: 1068px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #menubar {
+    display: inline-block;
+    position: relative;
+    align-items: baseline;
+    top: 80px;
+    left: 200px;
+  }
+  body > .navBar {
+    display: none;
+    background-color: orange;
+  }
+  header {
+    margin-top: 100px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .brefIntro {
+    margin: 50px auto;
+    width: 350px;
+    text-align: center;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto 30px;
+  }
+  .recentPost .navBar p:nth-child(1) {
+    display: none;
+  }
+  .recentPost .navBar p:nth-child(2) {
+    /* View all*/
+    display: none;
+  }
+  .recentPost .navBar p:nth-child(3) {
+    display: inline-block;
+    margin: auto;
+  }
+  .WhiteBoxContainer {
+    padding: 15px;
+    width: 400px;
+    margin: 10px;
+  }
+  .featureWork {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featureWork p:first-child {
+    margin: auto;
+  }
+  .works {
+    flex-direction: column;
+    align-items: center;
+  }
+  .workDescript {
+    width: 400px;
+  }
+  .imageFrame {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}
